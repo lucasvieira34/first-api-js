@@ -1,0 +1,26 @@
+{
+  "name": "first-api-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasvieira34/first-api-js.git"
+  },
+  "author": "Lucas Teixeira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasvieira34/first-api-js/issues"
+  },
+  "homepage": "https://github.com/lucasvieira34/first-api-js#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
