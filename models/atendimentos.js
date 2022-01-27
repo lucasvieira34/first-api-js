@@ -42,6 +42,31 @@ class Atendimento {
             })
         }
     }
+
+    listar(res) {
+        const sql = 'SELECT * from Atendimentos'
+
+        conexao.query(sql, (erro, resultados) => {
+            if(erro){
+                res.status(400).json(erro)
+            } else {
+                res.status(200).json(resultados)
+            }
+        })
+    }
+
+    buscaPorId(id, res) {
+        const sql = `SELECT * FROM Atendimentos WHERE id=${id}`
+
+        conexao.query(sql, (erro, resultado) => {
+            const atendimento = resultado[0]
+            if(erro) {
+                res.status(400).json(erro)
+            } else {
+                res.status(200).json(atendimento)
+            }
+        })
+    }
 }
 
 module.exports = new Atendimento
